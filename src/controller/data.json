@@ -58,5 +58,11 @@
   "email": "ytynum!@email.com",
   "password": "wefewrgaegege",
   "confirmPassword": "ergfaergaegerg"
+ },
+ {
+  "name": "Bas",
+  "email": "test@test.com",
+  "password": "asdf",
+  "confirmPassword": "asdf"
  }
 ]
