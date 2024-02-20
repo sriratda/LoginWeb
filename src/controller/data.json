@@ -46,5 +46,11 @@
   "email": "demo@prestashop.com",
   "password": "adasfsf",
   "confirmPassword": "sdfswef"
+ },
+ {
+  "name": "Bas",
+  "email": "tatan@test.com",
+  "password": "dfdsfd",
+  "confirmPassword": "dsfsdf"
  }
 ]
