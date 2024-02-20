@@ -68,7 +68,7 @@
             <li class="nav-item">
                 <li class="nav-item">
                     <span style="display: inline-block">Don't have an account?</span>
-                    <a href="./signup.html" class="nav-link" style="display: inline-block">Sign Up<i class="bi bi-arrow-right"></i></a>
+                    <a href="/signup" class="nav-link" style="display: inline-block">Sign Up<i class="bi bi-arrow-right"></i></a>
                   </li>
             </li>
           </ul>
@@ -80,20 +80,19 @@
     <div class="row justify-content-center login">
       <div class="col-md-6 col-lg-4">
         <h2 class="row justify-content-center">Log in to your account</h2>
-        <form>
+        <form action="/login/user" method="post">
           <div class="mb-3">
-            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email">
+            <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Email">
           </div>
           <div class="mb-3">
-            <input type="password" class="form-control" id="password" placeholder="Password">
+            <input type="password" class="form-control" id="password" name="password" placeholder="Password">
           </div>
           
           <section class="container mt-5">
             <div class="row justify-content-center">
-              <button type="button" class="btn btn-primary login-btn ">Login</button>
+              <button type="submit" class="btn btn-primary login-btn ">Login</button>
             </div>
           </section>
-          
         </form>
       </div>
     </div>

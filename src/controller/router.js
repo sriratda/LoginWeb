@@ -94,9 +94,34 @@ router.post('/register/user', (req, res) => {
         // Redirect to the information page for the newly registered user
         res.redirect(`/information/${email}`);
     }
-    
-    
+
+
 });
+
+
+router.post('/login/user', (req, res) => {
+    const data = req.body;
+    const email = data.email;
+    const password = data.password;
+    const filePath = path.join(__dirname, '/data.json');
+    console.log(email, password);
+
+    function readUsers() {
+        try {
+            const data = fs.readFileSync(filePath, 'utf8');
+            return JSON.parse(data);
+        } catch (err) {
+            console.error('Error reading users file:', err);
+            return [];
+        }
+    }
+
+    const users = readUsers();
+    const existingUser = users.find(user => user.email === email && user.password === password);
+
+    res.render(path.join(__dirname, '../views/information.ejs'), { data: [existingUser] });
+});
+
 
 // or console.log(users);
 // 

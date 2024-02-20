@@ -52,5 +52,11 @@
   "email": "tatan@test.com",
   "password": "dfdsfd",
   "confirmPassword": "dsfsdf"
+ },
+ {
+  "name": "Bas",
+  "email": "ytynum!@email.com",
+  "password": "wefewrgaegege",
+  "confirmPassword": "ergfaergaegerg"
  }
 ]
