@@ -6,7 +6,7 @@ const fs = require('fs');
 router.get('/', (req, res) => {
     res.status(200);
     res.type('text/html');
-    res.sendFile(path.join(__dirname, '../views/home.html'));
+    res.sendFile(path.join(__dirname, '../../index.html'));
 });
 
 router.get('/signup', (req, res) => {
