@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
-        background: rgb(238,174,202);
-        background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(192,255,252,1) 100%);
+      background: rgb(238, 174, 202);
+      background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(192, 255, 252, 1) 100%);
     }
 
     .navbar {
@@ -16,25 +17,27 @@
     }
 
     .navbar-brand {
-      font-size: 1.5rem; /* Adjust logo size as needed */
+      font-size: 1.5rem;
+      /* Adjust logo size as needed */
     }
 
     .navbar-nav {
-      justify-content: space-between; /* Align logo and signup link */
+      justify-content: space-between;
+      /* Align logo and signup link */
     }
 
     .signup {
       margin-top: 8%;
     }
 
-    .signup-btn  {
-        width: 100%;
-        border-radius: 22px;
-        margin: auto;
-        background-color: black;
-        border-color: black;
-        font-weight: 500;
-        height: 50px;
+    .signup-btn {
+      width: 100%;
+      border-radius: 22px;
+      margin: auto;
+      background-color: black;
+      border-color: black;
+      font-weight: 500;
+      height: 50px;
     }
 
 
@@ -45,7 +48,7 @@
 
 
     #form-signup {
-        margin-bottom: 10%;
+      margin-bottom: 10%;
     }
 
     /* Added to center "Sign Up" link in mobile view */
@@ -53,13 +56,14 @@
       .navbar-nav li {
         text-align: center;
       }
+
       .signup {
-      margin-top: 20%;
+        margin-top: 20%;
+      }
     }
-    }
-    
   </style>
 </head>
+
 <body>
   <header>
     <nav class="navbar navbar-expand-md navbar-light fixed-top">
@@ -68,13 +72,14 @@
           <img src="your-logo.png" alt="Your Logo">
         </a>
         <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <li class="nav-item">
-                    <span style="display: inline-block">Have an account?</span>
-                    <a href="./login.html" class="nav-link" style="display: inline-block">Log in<i class="bi bi-arrow-right"></i></a>
-                  </li>
-            </li>
-          </ul>
+          <li class="nav-item">
+          <li class="nav-item">
+            <span style="display: inline-block">Have an account?</span>
+            <a href="./login.html" class="nav-link" style="display: inline-block">Log in<i
+                class="bi bi-arrow-right"></i></a>
+          </li>
+          </li>
+        </ul>
       </div>
     </nav>
   </header>
@@ -86,11 +91,13 @@
         <form action="/register/user" method="post">
           <div class="mb-3">
             <label for="name" class="form-label">Full Name</label>
-            <input type="text" class="form-control" id="name" name="name" aria-describedby="nameHelp" placeholder="Enter your full name">
+            <input type="text" class="form-control" id="name" name="name" aria-describedby="nameHelp"
+              placeholder="Enter your full name">
           </div>
           <div class="mb-3">
             <label for="email" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter your email">
+            <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp"
+              placeholder="Enter your email">
             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
           </div>
           <div class="mb-3">
@@ -99,7 +106,8 @@
           </div>
           <div class="mb-3">
             <label for="confirmPassword" class="form-label">Confirm Password</label>
-            <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password">
+            <input type="password" class="form-control" id="confirmPassword" name="confirmPassword"
+              placeholder="Confirm your password">
           </div>
           <button type="submit" class="btn btn-primary signup-btn">Sign Up</button>
         </form>
