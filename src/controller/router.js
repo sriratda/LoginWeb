@@ -21,8 +21,10 @@ router.get('/login', (req, res) => {
     res.sendFile(path.join(__dirname, '../views/login.html'));
 });
 
-router.get('/information', (req, res) => {
+router.get('/information/:email', (req, res) => {
     const filePath = path.join(__dirname, '/data.json');
+
+    console.log(req.params.email);
 
     function readUsers() {
         try {
@@ -36,14 +38,23 @@ router.get('/information', (req, res) => {
 
     const users = readUsers();
 
+    // Fix the variable name here from usersdata to userdata
+    const userdata = users.find(user => user.email === req.params.email);
+
     res.status(200);
     res.type('text/html');
-    res.render(path.join(__dirname, '../views/information.ejs'), {data: users});
+
+    // Fix the variable name here from usersdata to userdata
+    console.log(userdata); // Add this line
+    res.render(path.join(__dirname, '../views/information.ejs'), { data: [userdata] });
 });
+
+
 
 router.post('/register/user', (req, res) => {
     const data = req.body;
     const filePath = path.join(__dirname, '/data.json');
+    const email = req.body.email;
 
     function readUsers() {
         try {
@@ -59,7 +70,6 @@ router.post('/register/user', (req, res) => {
         try {
             const jsonData = JSON.stringify(users, null, 1);
             fs.writeFileSync(filePath, jsonData, 'utf8');
-            res.redirect('/information')
         } catch (err) {
             console.error('Error writing users file:', err);
             throw err;
@@ -77,9 +87,19 @@ router.post('/register/user', (req, res) => {
     } else {
         // Add the new user only if not already present
         users.push(data);
+
+        // Update the users array before redirecting
         writeUsers(users);
-        res.status(201).send('User registered successfully.');
+
+        // Redirect to the information page for the newly registered user
+        res.redirect(`/information/${email}`);
     }
+    
+    
 });
+
+// or console.log(users);
+
+
 
 module.exports = router;
