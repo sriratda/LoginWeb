@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../views/index.html'));
 });
 
-router.get('/regiter', (req, res) => {
+router.get('/signup', (req, res) => {
     res.status(200);
     res.type('text/html');
     res.sendFile(path.join(__dirname, '../views/signup.html'));

@@ -3,6 +3,7 @@ const app = express()
 const port = 3000
 const router = require('./src/controller/router');
 
+app.use(express.urlencoded({extended: false}));
 app.use(router);
 
 app.listen(port, () => {
